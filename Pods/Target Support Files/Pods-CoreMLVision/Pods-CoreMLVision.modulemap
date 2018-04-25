@@ -1,0 +1,6 @@
+framework module Pods_CoreMLVision {
+  umbrella header "Pods-CoreMLVision-umbrella.h"
+
+  export *
+  module * { export * }
+}

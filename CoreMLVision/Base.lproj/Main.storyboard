@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreMLVision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="nol-Vi-4N7">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="T6K-XN-EVR">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="211.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detecting.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eer-d1-re4">
+                                        <rect key="frame" x="145.5" y="217.5" width="84" height="212"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osr-WU-e4E">
+                                        <rect key="frame" x="138" y="435.5" width="99" height="211.5"/>
+                                        <state key="normal" title="Choose Image"/>
+                                        <connections>
+                                            <action selector="ChooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="geB-jW-J2d"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="T6K-XN-EVR" secondAttribute="trailing" id="HVY-sW-EMV"/>
+                                    <constraint firstItem="T6K-XN-EVR" firstAttribute="leading" secondItem="nol-Vi-4N7" secondAttribute="leading" id="Wxa-EO-G1E"/>
+                                    <constraint firstAttribute="bottom" secondItem="osr-WU-e4E" secondAttribute="bottom" id="quL-py-unO"/>
+                                    <constraint firstItem="T6K-XN-EVR" firstAttribute="top" secondItem="nol-Vi-4N7" secondAttribute="top" id="v6g-b5-LVQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nol-Vi-4N7" secondAttribute="trailing" id="9De-Jo-UrN"/>
+                            <constraint firstItem="nol-Vi-4N7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kAV-96-ePS"/>
+                            <constraint firstItem="nol-Vi-4N7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kU3-DR-csn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nol-Vi-4N7" secondAttribute="bottom" id="qag-ap-nXd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myImageView" destination="T6K-XN-EVR" id="qxE-09-H2l"/>
+                        <outlet property="myLabel" destination="Eer-d1-re4" id="4tr-BO-Y6o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="DefaultImage" width="137" height="91"/>
+    </resources>
+</document>
